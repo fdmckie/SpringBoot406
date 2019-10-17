@@ -27,6 +27,16 @@ public class HomeController {
 //    private RoleRepository roleRepository;
 
 //    @PostConstruct
+//
+//Note that both @PostConstruct and @PreDestroy annotations are part of Java EE. And since Java EE has been deprecated in Java 9
+// and removed in Java 11 we have to add an additional dependency to use these annotations:
+//
+//<dependency>
+//    <groupId>javax.annotation</groupId>
+//    <artifactId>javax.annotation-api</artifactId>
+//    <version>1.3.2</version>
+//</dependency>
+
 //    public void postConstruct(){
 //        if (!roleRepository.findAll().iterator().hasNext()) {
 //            roleRepository.save(new Role("USER"));
