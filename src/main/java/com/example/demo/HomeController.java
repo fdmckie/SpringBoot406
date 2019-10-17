@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+//import javax.annotation.PostConstruct;
 import javax.validation.Valid;
 import java.security.Principal;
 
@@ -21,6 +22,17 @@ public class HomeController {
 
     @Autowired
     private UserService userService;
+
+//    @Autowired
+//    private RoleRepository roleRepository;
+
+//    @PostConstruct
+//    public void postConstruct(){
+//        if (!roleRepository.findAll().iterator().hasNext()) {
+//            roleRepository.save(new Role("USER"));
+//            roleRepository.save(new Role("ADMIN"));
+//        }
+//    }
 
     @GetMapping("/register")
     public String showRegistrationPage(Model model) {
